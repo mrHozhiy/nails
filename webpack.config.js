@@ -41,6 +41,7 @@ module.exports = {
   },
   devtool: isDev ? 'source-map' : false,
   devServer: {
+    liveReload: true,
     port: 3000,
     hot: isDev,
   },
@@ -58,6 +59,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/favicon.ico'),
           to: path.resolve(__dirname, 'dist'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/img'),
+          to: path.resolve(__dirname, 'dist/img'),
         },
       ],
     }),
